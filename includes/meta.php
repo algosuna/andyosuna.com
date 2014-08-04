@@ -1,0 +1,2 @@
+<meta name="description" content="Andy Osuna's Online Web Portfolio. I am a Turtle. I am also a Web Developer, Time Traveler and Photography Hobbyist. San Diego, California.">
+<meta name="keywords" content="San Diego, United States of America, Web Design, Web Development, Photography, San Diego, Web Design San Diego, Web Pages San Diego, Web Development San Diego, Responsive Design">
