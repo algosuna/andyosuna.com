@@ -40,4 +40,5 @@ $footerItem = 'Curriculum';
 $footerLink = strtolower($footerItem);
 $footerText = 'Ver mi <a href="'.$footerLink.'.pdf">'.$footerItem.'</a> | View site in <a href="?lang=en">English</a>';
 
-$notFound = 'Lo siento, la pagina que quieres acceder no existe o hubo un error. Cuentame en un correo los detalles del error. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>';
+$notFoundTitle = '404 - No Encontrado'
+$notFound = 'Lo lamento, la p&aacute;gina que ha solicitado no existe o hubo un error. Inf&oacute;rmeme en un correo con el URL que le trajo aqu&iacute;. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>';

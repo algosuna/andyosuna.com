@@ -7,13 +7,11 @@
 
 if (!isset($_COOKIE['lang'])):
 	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-else:
-	$lang = $_COOKIE['lang'];
-endif;
-
-if (isset($_GET['lang'])):
+elseif (isset($_GET['lang'])):
 	$lang = $_GET['lang'];
 	setcookie('lang', $lang, strtotime('+30 days'));
+else:
+	$lang = $_COOKIE['lang'];
 endif;
 
 switch ($lang):

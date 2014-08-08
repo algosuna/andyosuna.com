@@ -4,17 +4,20 @@
 
 	<?php
 		switch ($pageCurrent):
-			case $navItem[0]:
+			case ($navItem[0]):
 				include 'content/home.php';
 				break;
-			case $navItem[1]:
+			case ($navItem[1]):
 				include 'content/work.php';
 				break;
-			case $navItem[2]:
+			case ($navItem[2]):
 				include 'content/about.php';
 				break;
-			case $navItem[3]:
+			case ($navItem[3]):
 				include 'content/contact.php';
+				break;
+			case '404':
+				include '404.php';
 				break;
 			
 			default:
