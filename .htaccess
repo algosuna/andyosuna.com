@@ -1,6 +1,11 @@
 RewriteEngine On
 RewriteRule ^home/?$ index.php?page=home [NC,L]
+RewriteRule ^inicio/?$ index.php?page=home [NC,L]
 RewriteRule ^work/?$ index.php?page=work [NC,L]
+RewriteRule ^trabajo/?$ index.php?page=work [NC,L]
 RewriteRule ^work/(.+)/?$ index.php?page=work?thing=$1 [NC,L]
+RewriteRule ^trabajo/(.+)/?$ index.php?page=work?thing=$1 [NC,L]
 RewriteRule ^about/?$ index.php?page=about [NC,L]
+RewriteRule ^acerca/?$ index.php?page=about [NC,L]
 RewriteRule ^contact/?$ index.php?page=contact [NC,L]
+RewriteRule ^contacto/?$ index.php?page=contact [NC,L]

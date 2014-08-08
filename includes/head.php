@@ -1,5 +1,6 @@
+<?php include_once 'cd/content.php'; ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?php echo $lang ?>">
 <head>
 	<meta charset="utf-8">
 
@@ -10,7 +11,7 @@
 	<meta name="author" content="Andy Osuna">
 	<?php include 'includes/meta.php'; ?>
 
-	<title>Home | Andy Osuna, Designer and Developer | andyosuna.com</title>
+	<title><?php echo $pageCurrent.' | '.$pageTitle; ?> | andyosuna.com</title>
 
 	<?php include 'includes/css.php'; ?>
 </head>

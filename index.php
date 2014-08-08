@@ -3,30 +3,24 @@
 	<div class="divide"></div>
 
 	<?php
-	if (isset($_GET['page'])) {
-		$page = $_GET['page'];
-		
-		switch ($page) {
-			case 'home':
+		switch ($pageCurrent):
+			case $navItem[0]:
 				include 'content/home.php';
 				break;
-			case 'work':
+			case $navItem[1]:
 				include 'content/work.php';
 				break;
-			case 'about':
+			case $navItem[2]:
 				include 'content/about.php';
 				break;
-			case 'contact':
+			case $navItem[3]:
 				include 'content/contact.php';
 				break;
 			
 			default:
 				include 'content/home.php';
 				break;
-		}
-	} else {
-		include 'content/home.php';
-	}
+		endswitch;
 	?>
 
 	<div class="divide"></div>

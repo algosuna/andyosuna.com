@@ -211,10 +211,17 @@ nav ul li {
 Content
 
 */
+.content h2 {
+	padding: 20px 0px 0px;
+}
 .content p {
 	max-width: 640px;
 	margin: 0 auto;
 	padding: 20px 10px;
+}
+.content h2 + p {
+	font-size: 20px;
+	line-height: 26px;
 }
 .content figure {
 	width: 260px;

@@ -1,7 +1,7 @@
 <header class="container clear">
 	<div class="logo">
 		<h1>Andy Osuna</h1>
-		<p>designer &amp; developer</p>
+		<p><?php echo $headerTagline; ?></p>
 	</div>
 	<button class="hambarger">
 		<span class="hambar"></span>
@@ -10,10 +10,12 @@
 	</button>
 	<nav>
 		<ul>
-			<li><a href="home">Home</a></li>
-			<li><a href="work">Work</a></li>
-			<li><a href="about">About</a></li>
-			<li><a href="contact">Contact</a></li>
+			<?php echo '
+			<li><a href="'.$navLink[0].'">'.$navItem[0].'</a></li>
+			<li><a href="'.$navLink[1].'">'.$navItem[1].'</a></li>
+			<li><a href="'.$navLink[2].'">'.$navItem[2].'</a></li>
+			<li><a href="'.$navLink[3].'">'.$navItem[3].'</a></li>
+			'; ?>
 		</ul>
 	</nav>
 </header>
