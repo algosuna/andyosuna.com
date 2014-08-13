@@ -5,11 +5,11 @@
 // if the user changes the language manually
 // then a cookie is set to remember for a month
 
-if (!isset($_COOKIE['lang'])):
-	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
-elseif (isset($_GET['lang'])):
+if (isset($_GET['lang'])):
 	$lang = $_GET['lang'];
 	setcookie('lang', $lang, strtotime('+30 days'));
+elseif (!isset($_COOKIE['lang'])):
+	$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
 else:
 	$lang = $_COOKIE['lang'];
 endif;

@@ -17,7 +17,13 @@
 				include 'content/contact.php';
 				break;
 			case '404':
-				include '404.php';
+				include 'error.php';
+				break;
+			case '403':
+				include 'error.php';
+				break;
+			case '500':
+				include 'error.php';
 				break;
 			
 			default:

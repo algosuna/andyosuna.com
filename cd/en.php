@@ -38,6 +38,28 @@ $btnText = array(
 // footer
 $footerItem = 'Resume';
 $footerLink = strtolower($footerItem);
-$footerText = 'View my <a href="'.$footerLink.'.pdf">'.$footerItem.'</a> | Ver sitio en <a href="?lang=es">Espa&ntilde;ol</a>';
 
-$notFound = 'I\'m sorry, the page you requested doesn\'t exist or there was an error of some sort, tell me all about it in an <a href="mailto:info@andyosuna.com">email</a>.';
+if (!isset($_GET['page'])): // lazy fix
+	$footerText = 'View my <a href="'.$footerLink.'.pdf">'.$footerItem.'</a> | Ver sitio en <a href="?lang=es">Espa&ntilde;ol</a>';
+else:
+	$footerText = 'View my <a href="'.$footerLink.'.pdf">'.$footerItem.'</a>';
+endif;
+
+// error pages
+$errorPages = array(
+	'404' => array(
+		'errorTitle' => '404 - Not Found',
+		'error' => 'I\'m sorry, the page you requested doesn\'t exist or there was an error of some sort, tell me all about it in an email and include the URL that brought you here. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'
+	),
+	'403' => array(
+		'errorTitle' => '403 - Forbidden',
+		'error' => 'Hold it! You don\'t have permision to be here. If you are dying to know what lies in this directory you can head right up to <a href="https://github.com/andyosuna/andyosuna.com" target="_blank">GitHub</a>, the full project lies there. Also, add me on social media! I\'d like to hear what you think of my site :)'		
+	),
+	'500' => array(
+		'errorTitle' => '500 - Internal Server Error',
+		'error' => 'I\'m terribly sorry, I appear to be victim of a server error right know. Let me know in an email please! <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
+	),
+);
+
+$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
+$error = $errorPages[$pageCurrent]['error'];
