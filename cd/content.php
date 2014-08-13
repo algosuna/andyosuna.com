@@ -28,7 +28,7 @@ switch ($lang):
 		break;
 endswitch;
 
-if ($pageCurrent == '404' || $pageCurrent == '403' || $pageCurrent == '500'):
+if (isset($errorPages[$pageCurrent])):
 	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
 	$error = $errorPages[$pageCurrent]['error'];
 endif;

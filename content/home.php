@@ -6,9 +6,9 @@
 	</figure>
 	<div class="btn-group clear">
 		<?php echo '
-		<a href="work" class="btn">'.$btnText[0].'</a>
-		<a href="about" class="btn">'.$btnText[1].'</a>
-		<a href="contact" class="btn">'.$btnText[2].'</a>
+		<a href="'.$navLink[1].'" class="btn">'.$btnText[0].'</a>
+		<a href="'.$navLink[2].'" class="btn">'.$btnText[1].'</a>
+		<a href="'.$navLink[3].'" class="btn">'.$btnText[2].'</a>
 		'; ?>
 	</div>
 </div>
