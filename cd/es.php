@@ -60,8 +60,3 @@ $errorPages = array(
 		'error' => 'Lo lamento, parezco tener problemas t&eacute;cnicos en este momento. Inf&oacute;rmeme del error en un correo. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
 	)
 );
-
-if ($pageCurrent == '404' || $pageCurrent == '403' || $pageCurrent == '500'):
-	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
-	$error = $errorPages[$pageCurrent]['error'];
-endif;

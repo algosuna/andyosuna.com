@@ -27,3 +27,8 @@ switch ($lang):
 		include 'en.php';
 		break;
 endswitch;
+
+if ($pageCurrent == '404' || $pageCurrent == '403' || $pageCurrent == '500'):
+	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
+	$error = $errorPages[$pageCurrent]['error'];
+endif;
