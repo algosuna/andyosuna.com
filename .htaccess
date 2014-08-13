@@ -1,5 +1,7 @@
 RewriteEngine On
 
+Options -indexes
+
 ErrorDocument 404 /sites/andyosuna.com/index.php?page=404
 ErrorDocument 403 /sites/andyosuna.com/index.php?page=403
 ErrorDocument 500 /sites/andyosuna.com/index.php?page=500
