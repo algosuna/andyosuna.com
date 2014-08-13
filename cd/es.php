@@ -58,8 +58,10 @@ $errorPages = array(
 	'500' => array(
 		'errorTitle' => '500 - Error Interno del Servidor',
 		'error' => 'Lo lamento, parezco tener problemas t&eacute;cnicos en este momento. Inf&oacute;rmeme del error en un correo. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
-	),
+	)
 );
 
-$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
-$error = $errorPages[$pageCurrent]['error'];
+if ($pageCurrent == '404' || $pageCurrent == '403' || $pageCurrent == '500'):
+	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
+	$error = $errorPages[$pageCurrent]['error'];
+endif;
