@@ -1,5 +1,5 @@
 <div class="content container">
-	<p><?php echo $homeIntro; ?></p>
+	<p class="intro"><?php echo $homeIntro; ?></p>
 	<figure>
 		<img src="images/selfie.png" alt="Andrea Gonzalez Osuna" title="I am Andy Osuna">
 		<figcaption><?php echo $figCaption; ?></figcaption>

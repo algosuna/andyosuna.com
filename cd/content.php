@@ -27,8 +27,3 @@ switch ($lang):
 		include 'en.php';
 		break;
 endswitch;
-
-if (isset($errorPages[$pageCurrent])):
-	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
-	$error = $errorPages[$pageCurrent]['error'];
-endif;

@@ -35,6 +35,28 @@ $btnText = array(
 	'Contact Me'
 );
 
+// work content
+
+// about content
+$skill = array(
+	'HTML5',
+	'CSS3',
+	'JavaScript',
+	'PHP5',
+	'Bootstrap',
+	'jQuery',
+	'Git',
+	'GitHub'
+);
+$futSkill = array(
+	'Wordpress',
+	'Python',
+	'Django',
+	'CoffeeScript',
+	'Node.js',
+	'Laravel'
+);
+
 // footer
 $footerItem = 'Resume';
 $footerLink = strtolower($footerItem);
@@ -60,3 +82,8 @@ $errorPages = array(
 		'error' => 'I\'m terribly sorry, I appear to be victim of a server error right know. Let me know in an email please! <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
 	)
 );
+
+if (isset($errorPages[$pageCurrent])):
+	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
+	$error = $errorPages[$pageCurrent]['error'];
+endif;
