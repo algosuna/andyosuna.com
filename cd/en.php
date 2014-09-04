@@ -46,7 +46,8 @@ $skill = array(
 	'Bootstrap',
 	'jQuery',
 	'Git',
-	'GitHub'
+	'GitHub',
+	'SASS'
 );
 $futSkill = array(
 	'Wordpress',
