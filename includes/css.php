@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="http://andyosuna.com/css/reset.css">
 <link rel="stylesheet" href="css/style.css">
 
 <!-- IE Support -->
