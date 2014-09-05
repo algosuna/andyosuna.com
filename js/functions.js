@@ -1,5 +1,5 @@
 function mobileMenu () {
-	$('hambarger').on('touchstart click', function(e) {
+	$('.hambarger').on('touchstart click', function(e) {
 		e.preventDefault();
 		
 		var body = $('body'),
