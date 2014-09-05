@@ -37,8 +37,6 @@ $btnText = array(
 
 // work content
 
-// about content
-
 // footer
 $footerItem = 'Curriculum';
 $footerLink = strtolower($footerItem);
@@ -64,8 +62,3 @@ $errorPages = array(
 		'error' => 'Lo lamento, parezco tener problemas t&eacute;cnicos en este momento. Inf&oacute;rmeme del error en un correo. <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
 	)
 );
-
-if (isset($errorPages[$pageCurrent])):
-	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
-	$error = $errorPages[$pageCurrent]['error'];
-endif;

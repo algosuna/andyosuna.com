@@ -1,11 +1,13 @@
 /*
 
-Andy Osuna's Web Portfolio
-http://andyosuna.com
-Personal web portfolio website for Andrea Gonzalez Osuna.
-1.1
-July, 2014
-                 _                                                        
+Project: Andy Osuna's Portfolio
+URL: http://andyosuna.com
+Designer and Developer: Andy Osuna
+URL: http://andyosuna.com
+Description: Personal web portfolio website for Andrea Gonzalez Osuna (myself).
+Version: 1.1
+Date: July, 2014
+                 _                                                
   __ _ _ __   __| |_   _  ___  ___ _   _ _ __   __ _   ___ ___  _ __ ___  
  / _` | '_ \ / _` | | | |/ _ \/ __| | | | '_ \ / _` | / __/ _ \| '_ ` _ \ 
 | (_| | | | | (_| | |_| | (_) \__ \ |_| | | | | (_| || (_| (_) | | | | | |
@@ -14,31 +16,32 @@ July, 2014
 
 */
 
-// vars
-$blue: rgba(39, 170, 225, 0.8);
-$gray: rgba(137, 137, 137, 1);
+// color vars
+$mainblue: rgba(39, 170, 225, 0.8);
+$lightblue: rgba(39, 170, 255, 0.5);
+$darkblue: rgba(39, 170, 255, 1);
+$maingrey: rgba(137, 137, 137, 1);
 $bgcolor: rgba(246, 246, 246, 1);
-$yellow: rgba(255, 193, 34, 1);
+$linkyellow: rgba(255, 193, 34, 1);
 $fadedyellow: rgba(255, 193, 34, 0.5);
+$white: rgba(255, 255, 255, 1);
+$halfwhite: rgba(255, 255, 255, 0.5);
 
 // mixins
-@mixin coloreaseintransition($time) {
-	-webkit-transition: color $time ease-in;
-			-moz-trnsition: color $time ease-in;
-			 -o-transition: color $time ease-in;
-					transition: color $time ease-in;
-}
+@import 'mixins';
 
 /*
 
-Fancy Fonts
+Fonts
 
 */
-@import url("http://fonts.googleapis.com/css?family=Federo|Arimo:400,700,400italic");
+@import url('http://fonts.googleapis.com/css?family=Federo|Arimo:400,700,400italic');
 @font-face {
 	font-family: 'Andy';
 	src: url(fonts/Andy.ttf);
 }
+
+@import 'reset';
 
 /*
 
@@ -53,12 +56,13 @@ body {
 	font-family: 'Arimo';
 	font-size: 20px;
 	line-height: 26px;
-	color: $gray;
+	color: $maingrey;
 	background-color: $bgcolor;
 	text-align: center;
 	margin-bottom: 60px;
 }
 ::selection,
+::-o-selection,
 ::-moz-selection,
 ::-webkit-selection {
 	background: rgba(255, 121, 88, 1);
@@ -72,7 +76,7 @@ h5,
 h6 {
 	font-family: 'Federo';
 	font-weight: normal;
-	color: $blue;
+	color: $mainblue;
 }
 h1 {
 	font-size: 38px;
@@ -81,15 +85,16 @@ h1 {
 h2 {
 	font-size: 34px;
 }
-a {
-	color: $yellow;
+a,
+a:link,
+a:visited {
+	color: $linkyellow;
 	text-decoration: none;
-	-webkit-transition: color .4s ease-in;
-		 -moz-transition: color .4s ease-in;
-			 -o-transition: color .4s ease-in;
-					transition: color .4s ease-in;
+	@include coloreasein(.4s);
 }
-a:hover {
+a:hover,
+a:focus,
+a:active {
 	color: $fadedyellow;
 }
 
@@ -127,23 +132,18 @@ Classes
 	font-size: 30px;
 	padding: 15px;
 	margin: 10px;
-	color: rgba(255, 255, 255, 1);
-	background-color: rgba(39, 170, 255, 0.5);
+	color: $white;
+	background-color: $lightblue;
 	min-width: 190px;
 	display: block;
 	float: left;
-	-webkit-box-shadow: inset -3px -3px 0px 0px rgba(39, 170, 255, 1);
-		 -moz-box-shadow: inset -3px -3px 0px 0px rgba(39, 170, 255, 1);
-					box-shadow: inset -3px -3px 0px 0px rgba(39, 170, 255, 1);
-	-webkit-transition: background-color .4s ease-in;
-		 -moz-transition: background-color .4s ease-in;
-			 -o-transition: background-color .4s ease-in;
-					transition: background-color .4s ease-in;
+	@include insetboxshadow(-3px, $darkblue);
+	@include bgcoloreasein(.4s);
 }
 .btn:hover,
 .btn:focus,
 .btn:active {
-	background-color: rgba(39, 170, 255, 1);
+	background-color: $darkblue;
 }
 .divide {
 	display: block;
@@ -166,15 +166,13 @@ nav {
 	ul {
 		margin: 0;
 		padding: 0;
-	}
-	li {
-		display: inline-block;
-		margin: 0;
-		padding: 35px 20px 20px;
+		li {
+			display: inline-block;
+			margin: 0;
+			padding: 35px 20px 20px;
+		}
 	}
 }
-nav,
-nav ul,
 .hambarger {
 	display: none;
 	position: absolute;
@@ -183,47 +181,41 @@ nav ul,
 	float: right;
 	z-index: 40;
 	cursor: pointer;
-	box-shadow: inset -1px -1px 0px 0px $gray;
+	@include insetboxshadow(-1px, $maingrey);
 	border: none;
 	margin: 0px;
 	padding: 10px;
 	background-color: rgba(239, 239, 239, 1);
-	-webkit-transition: background-color .4s ease-in;
-		 -moz-transition: background-color .4s ease-in;
-			 -o-transition: background-color .4s ease-in;
-					transition: background-color .4s ease-in;
+	@include bgcoloreasein(.4s);
 }
 .hambarger:hover {
-	background-color: $gray;
+	background-color: $maingrey;
+	.hambar {
+		background-color: $fadedyellow;
+	}
 }
 .hambar {
 	display: block;
 	width: 22px;
 	height: 3px;
-	border-radius: 1px;
-	background-color: $yellow;
-	-webkit-transition: background-color .4s ease-in;
-		 -moz-transition: background-color .4s ease-in;
-			 -o-transition: background-color .4s ease-in;
-					transition: background-color .4s ease-in;
-}
-.hambar + .hambar {
-	margin-top: 5px;
-}
-.hambarger:hover .hambar {
-	background-color: $fadedyellow;
+	@include borderradius(1px);
+	background-color: $linkyellow;
+	@include bgcoloreasein(.4s);
+	+ .hambar {
+		margin-top: 5px;
+	}
 }
 
 /* "Logo" */
 .logo {
 	float: left;
 	padding: 20px;
-}
-.logo p {
-	font-family: 'Andy';
-	font-size: 28px;
-	font-weight: normal;
-	color: $yellow;
+	p {
+		font-family: 'Andy';
+		font-size: 28px;
+		font-weight: normal;
+		color: $linkyellow;
+	}
 }
 
 /*
@@ -231,27 +223,29 @@ nav ul,
 Content
 
 */
-.content h2 {
-	padding: 20px 0px 0px;
-}
-.content p {
-	max-width: 640px;
-	margin: 0 auto;
-	padding: 20px 10px;
-}
-.content p.intro {
-	font-size: 24px;
-	line-height: 36px;
-}
-.content figure {
-	width: 260px;
-	margin: 0 auto;
-}
-.content figcaption {
-	font-size: 14px;
-	font-style: italic;
-	color: rgba(137, 137, 137, 0.8);
-	line-height: 16px;
+.content {
+	h2 {
+		padding: 20px 0px 0px;
+	}
+	p {
+		max-width: 640px;
+		margin: 0 auto;
+		padding: 20px 10px;
+	}
+	p.intro {
+		font-size: 24px;
+		line-height: 36px;
+	}
+	figure {
+		width: 260px;
+		margin: 0 auto;
+	}
+	figcaption {
+		font-size: 14px;
+		font-style: italic;
+		color: rgba(137, 137, 137, 0.8);
+		line-height: 16px;
+	}
 }
 
 /*
@@ -261,13 +255,13 @@ About
 */
 .about {
 	text-align: left;
-}
-.about p {
-	max-width: 100%;
-}
-.about ul {
-	margin: 0px 0px 10px 40px;
-	list-style-type: circle;
+	p {
+		max-width: 100%;
+	}
+	ul {
+		margin: 0px 0px 10px 40px;
+		list-style-type: circle;
+	}
 }
 
 /*
@@ -280,92 +274,12 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 60px;
-}
-footer p {
-	font-size: 16px;
-	font-style: italic;
-	line-height: 20px;
-	padding: 20px 0;
-}
-
-/*
-
-Responsive Junk
-
-*/
-@media (max-width: 759px) {
-	header,
-	footer {
-		background-color: $bgcolor;
-	}
-	.logo {
-		padding: 20px 0px;
-		width: 100%;
-		position: relative;
-		background-color: $bgcolor;
-		z-index: 20;
-	}
-	.content {
-		position: relative;
-		height: 100%;
-		z-index: 20;
-		background-color: $bgcolor;
-	}
-	nav {
-		display: none;
-		position: absolute;
-		top: 0;
-		right: -200px;
-		width: 150px;
-		height: 100%;
-		padding: 0px 25px;
-		margin: 0;
-		padding-bottom: 60px;
-		background: $gray;
-		z-index: 10;
-	}
-	nav ul {
-		margin: 30px 0;
-	}
-	nav ul li {
-		display: block;
-		padding: 15px 0;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	}
-	nav ul li:first-of-type {
-		border-top: 1px solid rgba(255, 255, 255, 0.5);
-	}
-	.hambarger {
-		display: block;
-	}
-	.btn {
-		width: 100%;
-		margin: 5px 0px!important;
-		padding: 15px 0px!important;
-	}
-	.btn-group {
-		margin: 0 20px;
-		width: auto;
-	}
-	/* nav animation */
-	.animating nav,
-	.nav-visible nav {
-		display: block;
-	}
-	.animating {
-						transition: 				transform .25s ease-in-out;
-		-webkit-transition: -webkit-transform .25s ease-in-out;
-	}
-	.animating.left {
-						transform: translate3d( -200px, 0, 0 );
-		-webkit-transform: translate3d( -200px, 0, 0 );
-	}
-	.animating.right {
-						transform: translate3d( 200px, 0, 0 );
-		-webkit-transform: translate3d( 200px, 0, 0 );
-	}
-	.nav-visible {
-		position: relative;
-		right: 200px;
+	p {
+		font-size: 16px;
+		font-style: italic;
+		line-height: 20px;
+		padding: 20px 0;
 	}
 }
+
+@import 'responsive';

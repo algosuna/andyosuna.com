@@ -27,3 +27,34 @@ switch ($lang):
 		include 'en.php';
 		break;
 endswitch;
+
+//
+// stuff below is not language dependant
+//
+
+// about content
+$skill = array(
+	'HTML5',
+	'CSS3',
+	'JavaScript',
+	'PHP5',
+	'Bootstrap',
+	'jQuery',
+	'Git',
+	'GitHub',
+	'SASS'
+);
+$futSkill = array(
+	'Wordpress',
+	'Python',
+	'Django',
+	'CoffeeScript',
+	'Node.js',
+	'Laravel'
+);
+
+// error handling
+if (isset($errorPages[$pageCurrent])):
+	$errorTitle = $errorPages[$pageCurrent]['errorTitle'];
+	$error = $errorPages[$pageCurrent]['error'];
+endif;
