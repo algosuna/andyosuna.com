@@ -50,7 +50,9 @@ $futSkill = array(
 	'Django',
 	'CoffeeScript',
 	'Node.js',
-	'Laravel'
+	'Laravel',
+	'Handlebars',
+	'Ember.js'
 );
 
 // error handling
