@@ -53,7 +53,8 @@ $futSkill = array(
 	'Laravel',
 	'Handlebars',
 	'Ember.js',
-	'Socket.IO'
+	'Socket.IO',
+	'AngularJS'
 );
 
 // error handling
