@@ -59,6 +59,6 @@ $errorPages = array(
 	),
 	'500' => array(
 		'errorTitle' => '500 - Internal Server Error',
-		'error' => 'I\'m terribly sorry, I appear to be victim of a server error right know. Let me know in an email please! <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
+		'error' => 'I\'m terribly sorry, I appear to technical issues at this time. Let me know in an email please! <a href="mailto:info@andyosuna.com">info@andyosuna.com</a>'		
 	)
 );
