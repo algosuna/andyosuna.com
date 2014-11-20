@@ -34,27 +34,27 @@ endswitch;
 
 // about content
 $skill = array(
-	'HTML5',
-	'CSS3',
-	'JavaScript',
-	'PHP5',
-	'Bootstrap',
-	'jQuery',
-	'Git',
-	'GitHub',
-	'SASS'
+	'HTML5' => '98',
+	'SASS' => '94',
+	'GitHub' => '91',
+	'Bootstrap' => '90',
+	'CSS3' => '85',
+	'Git' => '83',
+	'JavaScript' => '80',
+	'PHP5' => '75',
+	'jQuery' => '70'
 );
 $futSkill = array(
-	'Wordpress',
-	'Python',
-	'Django',
-	'CoffeeScript',
-	'Node.js',
-	'Laravel',
-	'Handlebars',
-	'Ember.js',
-	'Socket.IO',
-	'AngularJS'
+	'Wordpress' => '43',
+	'Laravel' => '28',
+	'Python' => '20',
+	'Django' => '10',
+	'CoffeeScript' => '8',
+	'Handlebars' => '6',
+	'Node.js' => '0',
+	'Ember.js' => '0',
+	'Socket.IO' => '0',
+	'AngularJS' => '0'
 );
 
 // error handling
