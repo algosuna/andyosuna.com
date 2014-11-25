@@ -1,3 +1,4 @@
+<?php include_once 'content/vars.php'; ?>
 <?php include 'includes/head.php'; ?>
 
 	<div class="divide"></div>
@@ -5,29 +6,29 @@
 	<?php
 		switch ($pageCurrent):
 			case ($navItem[0]):
-				include 'content/home.php';
+				include 'views/home.php';
 				break;
 			case ($navItem[1]):
-				include 'content/work.php';
+				include 'views/work.php';
 				break;
 			case ($navItem[2]):
-				include 'content/about.php';
+				include 'views/about.php';
 				break;
 			case ($navItem[3]):
-				include 'content/contact.php';
+				include 'views/contact.php';
 				break;
 			case '404':
-				include 'error.php';
+				include 'views/error.php';
 				break;
 			case '403':
-				include 'error.php';
+				include 'views/error.php';
 				break;
 			case '500':
-				include 'error.php';
+				include 'views/error.php';
 				break;
 			
 			default:
-				include 'content/home.php';
+				include 'views/home.php';
 				break;
 		endswitch;
 	?>
