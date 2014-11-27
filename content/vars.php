@@ -1,6 +1,9 @@
 <?php
 
-// this file detects the browser language
+// this file contains all the variables used in the site
+// the variables define the content fed to the views
+
+// this bit detects the browser language
 // and changes the content accordingly
 // if the user changes the language manually
 // then a cookie is set to remember for a month
@@ -54,7 +57,8 @@ $futSkill = array(
 	'Node.js' => '0',
 	'Ember.js' => '0',
 	'Socket.IO' => '0',
-	'AngularJS' => '0'
+	'AngularJS' => '0',
+	'SVG' => '0'
 );
 
 // error handling

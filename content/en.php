@@ -55,7 +55,7 @@ $errorPages = array(
 	),
 	'403' => array(
 		'errorTitle' => '403 - Forbidden',
-		'error' => 'Hold it! You don\'t have permision to be here. If you are dying to know what lies in this directory you can head right up to <a href="https://github.com/andyosuna/andyosuna.com" target="_blank">GitHub</a>, the full project lies there. Also, add me on social media! I\'d like to hear what you think of my site :)'		
+		'error' => 'Whoa! You don\'t have permision to be here. If you are dying to know what lies in this directory you can head right up to <a href="https://github.com/andyosuna/andyosuna.com" target="_blank">GitHub</a>, the full project lies there. Also, add me on social media! I\'d like to hear what you think of my site :)'		
 	),
 	'500' => array(
 		'errorTitle' => '500 - Internal Server Error',
