@@ -8,6 +8,8 @@
 // if the user changes the language manually
 // then a cookie is set to remember for a month
 
+date_default_timezone_set('UTC');
+
 if (isset($_GET['lang'])):
 	$lang = $_GET['lang'];
 	setcookie('lang', $lang, strtotime('+30 days'));
