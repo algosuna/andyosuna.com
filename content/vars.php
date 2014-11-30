@@ -39,28 +39,28 @@ endswitch;
 
 // about content
 $skill = array(
-	'HTML5' => '98',
-	'SASS' => '94',
-	'GitHub' => '91',
-	'Bootstrap' => '90',
-	'CSS3' => '85',
-	'Git' => '83',
-	'JavaScript' => '80',
-	'PHP5' => '75',
-	'jQuery' => '70'
+	'HTML5',
+	'SASS',
+	'GitHub',
+	'Bootstrap',
+	'CSS3',
+	'Git',
+	'JavaScript',
+	'PHP5',
+	'jQuery'
 );
 $futSkill = array(
-	'Wordpress' => '43',
-	'Laravel' => '28',
-	'Python' => '20',
-	'Django' => '10',
-	'CoffeeScript' => '8',
-	'Handlebars' => '6',
-	'Node.js' => '0',
-	'Ember.js' => '0',
-	'Socket.IO' => '0',
-	'AngularJS' => '0',
-	'SVG' => '0'
+	'Wordpress',
+	'Laravel',
+	'Python',
+	'Django',
+	'CoffeeScript',
+	'Handlebars',
+	'Node.js',
+	'Ember.js',
+	'Socket.IO',
+	'AngularJS',
+	'SVG'
 );
 
 // error handling
