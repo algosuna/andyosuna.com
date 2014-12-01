@@ -20,3 +20,5 @@ RewriteRule ^acerca/?$ index.php?page=acerca [NC,L]
 
 RewriteRule ^contact/?$ index.php?page=contact [NC,L]
 RewriteRule ^contacto/?$ index.php?page=contacto [NC,L]
+
+RewriteRule ^login/?$ index.php?page=login [NC,L]
