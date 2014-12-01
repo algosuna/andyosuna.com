@@ -81,6 +81,11 @@ a:focus,
 a:active {
   color: rgba(255, 193, 34, 0.5); }
 
+button:focus,
+a:focus {
+  border: 1px solid #ffc122;
+  outline: none; }
+
 /*
 
 Classes
@@ -166,10 +171,6 @@ nav {
   float: right;
   z-index: 40;
   cursor: pointer;
-  -webkit-box-shadow: inset -1px -1px 0px 0px #898989;
-  -moz-box-shadow: inset -1px -1px 0px 0px #898989;
-  -o-box-shadow: inset -1px -1px 0px 0px #898989;
-  box-shadow: inset -1px -1px 0px 0px #898989;
   border: none;
   margin: 0px;
   padding: 10px;
@@ -177,7 +178,11 @@ nav {
   -webkit-transition: background-color 0.4s ease-in;
   -moz-transition: background-color 0.4s ease-in;
   -o-transition: background-color 0.4s ease-in;
-  transition: background-color 0.4s ease-in; }
+  transition: background-color 0.4s ease-in;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px; }
 
 .hambarger:hover {
   background-color: #898989; }
@@ -216,7 +221,7 @@ Content
 
 */
 .content h2 {
-  padding: 20px 0px 0px; }
+  padding: 30px 0px 0px; }
 .content p {
   max-width: 640px;
   margin: 0 auto;
@@ -232,6 +237,8 @@ Content
   font-style: italic;
   color: rgba(137, 137, 137, 0.8);
   line-height: 16px; }
+.content .error-gif {
+  margin-top: 20px; }
 
 /*
 
@@ -271,6 +278,9 @@ Responsive Junk
   header,
   footer {
     background-color: #f6f6f6; }
+
+  footer {
+    bottom: -60px; }
 
   .logo {
     padding: 20px 0px;
@@ -319,6 +329,11 @@ Responsive Junk
     width: auto; }
 
   /* nav animation */
+  body,
+  nav {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000; }
+
   .animating nav,
   .nav-visible nav {
     display: block; }
