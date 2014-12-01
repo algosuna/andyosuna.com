@@ -1,6 +1,0 @@
-//line 58 https://github.com/apeatling/smooth-mobile-menu/blob/master/menu.css
-TODO: try to fix the weird jump in the transition, this is supposed to fix it
-#page, #menu {
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-}

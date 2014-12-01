@@ -17,6 +17,9 @@
 			case ($navItem[3]):
 				include 'views/contact.php';
 				break;
+			case 'Login':
+				include 'views/login.php';
+				break;
 			case '404':
 				include 'views/error.php';
 				break;

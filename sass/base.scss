@@ -96,6 +96,12 @@ a:active {
 	color: $fadedyellow;
 }
 
+button:focus,
+a:focus {
+	border: 1px solid $linkyellow;
+	outline: none;
+}
+
 /*
 
 Classes
@@ -179,12 +185,12 @@ nav {
 	float: right;
 	z-index: 40;
 	cursor: pointer;
-	@include insetboxshadow(-1px, $maingrey);
 	border: none;
 	margin: 0px;
 	padding: 10px;
 	background-color: rgba(239, 239, 239, 1);
 	@include bgcoloreasein(.4s);
+	@include borderradius(3px);
 }
 .hambarger:hover {
 	background-color: $maingrey;
@@ -223,7 +229,7 @@ Content
 */
 .content {
 	h2 {
-		padding: 20px 0px 0px;
+		padding: 30px 0px 0px;
 	}
 	p {
 		max-width: 640px;
@@ -243,6 +249,9 @@ Content
 		font-style: italic;
 		color: rgba(137, 137, 137, 0.8);
 		line-height: 16px;
+	}
+	.error-gif {
+		margin-top: 20px;
 	}
 }
 

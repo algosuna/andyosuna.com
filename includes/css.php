@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="http://andyosuna.com/css/reset.css">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="http://localhost/sites/andyosuna.com/css/style.css">
 
 <!-- IE Support -->
 <!--[if lt IE 9]>

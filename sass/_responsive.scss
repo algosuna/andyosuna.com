@@ -8,6 +8,9 @@ Responsive Junk
   footer {
     background-color: $bgcolor;
   }
+  footer {
+    bottom: -60px;
+  }
   .logo {
     padding: 20px 0px;
     width: 100%;
@@ -58,6 +61,11 @@ Responsive Junk
     width: auto;
   }
   /* nav animation */
+  body,
+  nav {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
   .animating nav,
   .nav-visible nav {
     display: block;
