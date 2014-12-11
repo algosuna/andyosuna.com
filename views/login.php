@@ -8,5 +8,6 @@
       <input type="password" name="password" value="">
       <button type="submit" class="btn">Log In</button>
     </form>
+    <?php if (isset($hi)) echo $hi ?>
   </div>
 </div>
