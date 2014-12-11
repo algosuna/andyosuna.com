@@ -16,6 +16,22 @@
        -o-transition:      -o-transform $time ease-in-out;
           transition:         transform $time ease-in-out;
 }
+@mixin transitionsingle($type, $time) {
+  -webkit-transition: $type $time ease-in;
+     -moz-transition: $type $time ease-in;
+       -o-transition: $type $time ease-in;
+          transition: $type $time ease-in;
+}
+@mixin transitiondouble($type, $time, $type2) {
+  -webkit-transition: $type $time ease-in,
+                      $type2 $time ease-in;
+     -moz-transition: $type $time ease-in,
+                      $type2 $time ease-in;
+       -o-transition: $type $time ease-in,
+                      $type2 $time ease-in;
+          transition: $type $time ease-in,
+                      $type2 $time ease-in;
+}
 @mixin translate3d($size) {
   -webkit-transform: translate3d( $size, 0, 0 );
      -moz-transform: translate3d( $size, 0, 0 );

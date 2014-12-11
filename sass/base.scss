@@ -27,6 +27,10 @@ $fadedyellow: rgba(255, 193, 34, 0.5);
 $white: rgba(255, 255, 255, 1);
 $halfwhite: rgba(255, 255, 255, 0.5);
 
+// font vars
+$headingfont: 'Federo', Helvetica, Arial, sans-serif;
+$bodyfont: 'Arimo', Helvetica, Arial, sans-serif;
+
 // mixins
 @import 'mixins';
 
@@ -51,7 +55,7 @@ html {
 	min-height: 100%;
 }
 body {
-	font-family: 'Arimo';
+	font-family: $bodyfont;
 	font-size: 20px;
 	line-height: 26px;
 	color: $maingrey;
@@ -72,7 +76,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'Federo';
+	font-family: $headingfont;
 	font-weight: normal;
 	color: $mainblue;
 }
@@ -132,7 +136,7 @@ Classes
 .btn,
 .btn:link,
 .btn:visited {
-	font-family: 'Federo';
+	font-family: $headingfont;
 	font-size: 30px;
 	padding: 15px;
 	margin: 10px;
@@ -164,7 +168,7 @@ Header
 
 /* Navigation */
 nav {
-	font-family: 'Federo';
+	font-family: $headingfont;
 	font-size: 26px;
 	float: right;
 	ul {
@@ -257,6 +261,42 @@ Content
 
 /*
 
+Form Elements
+
+*/
+label,
+input {
+  display: block;
+  width: 100%;
+}
+label {
+  text-align: left;
+}
+input {
+	width: 100%;
+	max-width: 380px;
+	border: 1px solid opacify($maingrey, 0.8);
+	padding: 15px 10px;
+	margin: 5px 0px 15px;
+	font-size: 16px;
+	color: $maingrey;
+	@include transitiondouble(border, 0.3s, max-width);
+}
+input:hover {
+	border: 1px solid $linkyellow;
+}
+input:focus {
+	max-width: 400px;
+}
+button[type="submit"] {
+	float: none;
+	width: 100%;
+	margin: 0px;
+	border: none;
+}
+
+/*
+
 About
 
 */
@@ -269,6 +309,16 @@ About
 		margin: 0px 0px 10px 40px;
 		list-style-type: circle;
 	}
+}
+
+/*
+
+Login
+
+*/
+.login-container {
+	max-width: 400px;
+	margin: 0 auto 50px;
 }
 
 /*
