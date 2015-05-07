@@ -1,3 +1,2 @@
-.sass-cache
-github
-resources
+db.sqlite3
+*.pyc
