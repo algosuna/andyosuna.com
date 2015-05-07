@@ -57,7 +57,9 @@ ROOT_URLCONF = 'andyosuna.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            '/templates/',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -68,10 +70,6 @@ TEMPLATES = [
             ],
         },
     },
-]
-
-TEMPLATE_DIRS = [
-    '/templates/',
 ]
 
 WSGI_APPLICATION = 'andyosuna.wsgi.application'
